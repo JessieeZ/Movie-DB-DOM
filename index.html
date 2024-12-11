@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies DB DOM</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Logo and Tabs -->
+    <header>
+        <div class="logo-container">
+            <img src="/Movie DB DOM/images/logo_long.svg" alt="Logo">
+        </div>
+        <div class="tab-item-container">
+            <ul class="nav-bar">
+                <li class="tab-item active" name="HOME" id="homeTab">HOME</li>
+                <li class="tab-item" name="LIKED_LIST" id="likedTab">LIKED</li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Category Dropdown -->
+        <div class="select-container">
+            <select class="filter-select" id="categorySelect">
+                <option value="popular">Popular</option>
+                <option value="now_playing">Now Playing</option>
+                <option value="top_rated">Top Rated</option>
+                <option value="upcoming">Upcoming</option>
+            </select>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination-container">
+            <button id="prevButton" class="btn">Prev</button>
+            <p id="currentPage"></p>
+            <button id="nextButton" class="btn">Next</button>
+        </div>
+
+        <!-- Liked Movies Section -->
+        <section id="likedMoviesSection" style="display: none;">
+            <div id="likedMoviesList"></div>
+        </section>
+        
+        <!-- Movies Listing -->
+        <div id="movieSection" class="movie-list-section">
+            <div class="list-container" id="movieList"></div>
+        </div>
+
+        <!-- Movie Detail Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-container">
+              <div class="modal-content">
+                <span id="closeModal" class="close-modal">&times;</span>
+                <div class="modal-img">
+                  <img id="movieDetailPoster" src="" alt="Movie Poster">
+                </div>
+                <div class="modal-info">
+                  <h3 id="movieDetailTitle"></h3>
+          
+                  <p><strong>Overview</strong></p>
+                  <p id="movieDetailOverview"></p>
+          
+                  <p><strong>Genres</strong></p>
+                  <p id="movieDetailGenres"></p> 
+          
+                  <p><strong>Rating</strong></p>
+                  <p id="movieDetailRating"></p>
+          
+                  <p><strong>Production Companies</strong></p>
+                  <p id="movieDetailCompanies"></p>
+                </div>
+              </div>
+            </div>
+          </div>          
+                
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
